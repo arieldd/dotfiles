@@ -1,0 +1,3 @@
+require("arieldd")
+
+print("hello")
