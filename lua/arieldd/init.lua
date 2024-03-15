@@ -1,6 +1,6 @@
 require("arieldd.remap")
+require("arieldd.set")
 require("arieldd.lazy-setup")
 require("lazy").setup("arieldd.plugins")
 
-vim.o.background = "dark"
-vim.cmd.colorscheme "gruvbox"
+vim.cmd.colorscheme "rose-pine"
