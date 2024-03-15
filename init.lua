@@ -1,3 +1,2 @@
 require("arieldd")
-
 print("hello")

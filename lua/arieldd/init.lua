@@ -1,4 +1,4 @@
-require("arieldd.lazy")
 require("arieldd.remap")
+require("arieldd.lazy-setup")
 
-print("Hello from me!")
+require("lazy").setup("arieldd.plugins")
