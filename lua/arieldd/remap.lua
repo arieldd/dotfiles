@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 -- Netrw vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
-vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>', {
-    noremap = true
-})
+vim.keymap.set('n', '<leader>e', ':Neotree filesystem reveal right<CR>')
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
