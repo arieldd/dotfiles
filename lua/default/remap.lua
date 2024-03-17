@@ -2,7 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Netrw vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
-vim.keymap.set('n', '<leader>n', ':Neotree<CR>') --filesystem reveal right<CR>')
+vim.keymap.set('n', '<leader>n', ':Neotree toggle current reveal_force_cwd left<cr>')
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
