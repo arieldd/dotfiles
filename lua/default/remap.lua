@@ -1,4 +1,6 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
 -- Netrw vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set('n', '<leader>e', ':Neotree<CR>') --filesystem reveal right<CR>')
 
