@@ -1,1 +1,1 @@
-require("arieldd")
+require("default")
