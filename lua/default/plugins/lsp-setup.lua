@@ -49,7 +49,9 @@ return {
             require('mason').setup()
 
             local servers = {
-                clangd = {},
+                clangd = {
+                    filetyoes= { 'c' , 'cpp', 'objc', 'objcpp' },
+                },
                 gopls = {},
                 pyright = {},
                 rust_analyzer = {},
