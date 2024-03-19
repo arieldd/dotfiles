@@ -47,9 +47,6 @@ return {
 			require("Comment").setup()
 		end,
 	},
-	{ -- Adjust tabstop and shiftwidth heuristically TODO remove maybe
-		"tpope/vim-sleuth",
-	},
 	{ -- Undo tree for undo visualisation
 		"mbbill/undotree",
 		config = function()
