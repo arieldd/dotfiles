@@ -13,7 +13,7 @@ return {
 			local telescope_builtin = require("telescope.builtin")
 
 			vim.api.nvim_create_autocmd("LspAttach", {
-				group = vim.api.nvim_create_augroup("default-lsp-attach", { clear = true }),
+				group = vim.api.nvim_create_augroup("DefaultLspConfig", { clear = true }),
 				callback = function(event)
 					local map = function(keys, func, desc)
 						vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
@@ -56,7 +56,8 @@ return {
 				},
 				gopls = {},
 				pyright = {},
-				rust_analyzer = {},
+				-- Set up in dedicated plugin
+				-- rust_analyzer = {},
 				tsserver = {},
 				lua_ls = {},
 				htmx = {},
