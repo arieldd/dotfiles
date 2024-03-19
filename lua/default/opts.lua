@@ -16,11 +16,7 @@ vim.opt.wrap = false
 -- Undo
 vim.opt.swapfile = false
 vim.opt.backup = false
-if os.getenv("HOME") then
-    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-else
-    vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
-end
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
 vim.opt.undofile = true
 
 -- Search
