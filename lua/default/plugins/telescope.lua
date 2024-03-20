@@ -17,16 +17,52 @@ return {
             { "nvim-tree/nvim-web-devicons",            enabled = vim.g.have_nerd_font },
         },
         config = function()
+            local center = {
+                border = {
+                    prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
+                    results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
+                    preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+                },
+                layout_config = {
+                    preview_cutoff = 20,
+                    height = 0.4,
+                    anchor = "N",
+                    mirror = true,
+                    prompt_position = "top",
+                    width = 0.5,
+                },
+            }
+
             require("telescope").setup({
+                defaults = {
+                    layout_strategy = "center",
+                    layout_config = center.layout_config,
+                    sorting_strategy = "ascending",
+                    prompt_prefix = "   ",
+                    entry_prefix = "   ",
+                    multi_icon = "  ",
+                    selection_caret = "  ",
+                    border = true,
+                    borderchars = center.border,
+                    results_title = "",
+                    prompt_title = " Prompt ",
+                },
                 extensions = {
                     ["ui-select"] = {
                         require("telescope.themes").get_dropdown({}),
+                    },
+                    file_browser = {
+                        hijack_netrw = true,
+                        path = "%:p:h",
+                        default_selection_index = 2,
                     },
                 },
             })
 
             pcall(require("telescope").load_extension, "fzf")
             pcall(require("telescope").load_extension, "ui-select")
+            pcall(require("telescope").load_extension, "noice")
+            pcall(require("telescope").load_extension, "file_browser")
 
             local builtin = require("telescope.builtin")
             vim.keymap.set("n", "<C-p>", builtin.git_files, {})
