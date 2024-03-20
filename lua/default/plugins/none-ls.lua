@@ -15,7 +15,6 @@ return {
 				null_ls.builtins.formatting.clang_format,
 				require("none-ls.formatting.jq"),
 				-- Linters
-				require("none-ls.diagnostics.cpplint"),
 				require("none-ls.diagnostics.eslint_d"),
 			},
 		})
