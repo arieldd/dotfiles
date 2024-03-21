@@ -8,12 +8,12 @@ require("notify").setup({
 		ERROR = " ",
 		INFO = " ",
 		TRACE = "✎",
-		WARN = " "
+		WARN = " ",
 	},
 	level = 2,
 	minimum_width = 50,
 	maximum_width = 50,
 	render = "default",
 	stages = "slide",
-	timeout = 5000
+	timeout = 5000,
 })

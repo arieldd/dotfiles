@@ -14,7 +14,7 @@ require("noice").setup({
 		view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
 		opts = {
 			border = { padding = { 0 } },
-        },
+		},
 		format = {
 			cmdline = { pattern = "^:", icon = " 󰘳 ", lang = "vim" },
 			search_down = { kind = "search", pattern = "^/", icon = "   ", lang = "regex", title = " Search " },
