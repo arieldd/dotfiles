@@ -17,6 +17,8 @@ return {
                 extensions = {
                     "neo-tree",
                     "lazy",
+                    "mason",
+                    "fugitive",
                 },
             })
         end,
