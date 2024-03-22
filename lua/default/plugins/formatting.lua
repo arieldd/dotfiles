@@ -11,6 +11,7 @@ return {
 					lua = { "stylua" },
 					python = { "black" },
 					javascript = { { "prettierd", "prettier" } },
+					html = { { "prettierd", "prettier" } },
 					cpp = { "clang-format" },
 					go = { "goimports", "gofmt" },
 				},
@@ -34,6 +35,7 @@ return {
 
 			linters.linters_by_ft = {
 				javascript = { "eslint_d" },
+				html = { "eslint_d" },
 				typescript = { "eslint_d" },
 				javascriptreact = { "eslint_d" },
 				typescriptreact = { "eslint_d" },

@@ -56,7 +56,7 @@ return {
 
 			local servers = {
 				clangd = {
-					filetyoes = { "c", "cpp", "objc", "objcpp" },
+					filetypes = { "c", "cpp", "objc", "objcpp" },
 				},
 				gopls = {},
 				pyright = {},
@@ -65,6 +65,7 @@ return {
 				tsserver = {},
 				lua_ls = {},
 				htmx = {},
+				html = {},
 			}
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
