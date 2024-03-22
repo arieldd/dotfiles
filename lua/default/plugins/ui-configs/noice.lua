@@ -21,7 +21,7 @@ require("noice").setup({
 			search_up = { kind = "search", pattern = "^%?", icon = "   ", lang = "regex", title = " Search " },
 			filter = { pattern = "^:%s*!", icon = "  ", lang = "bash", title = " Shell " },
 			lua = { pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = "  ", lang = "lua" },
-			help = { pattern = "^:%s*he?l?p?%s+", icon = " ", title = " Help " },
+			help = { pattern = "^:%s*he?l?p?%s+", icon = "  ", title = " Help " },
 			input = {}, -- Used by input()
 		},
 	},
@@ -194,7 +194,6 @@ require("noice").setup({
 	views = {
 		cmdline_popup = {
 			position = {
-				row = "2",
 				col = "50%",
 			},
 			size = {
@@ -227,7 +226,6 @@ require("noice").setup({
 		popupmenu = {
 			relative = "editor",
 			position = {
-				row = 8,
 				col = "50%",
 			},
 			size = {
