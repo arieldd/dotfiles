@@ -56,12 +56,17 @@ return {
 		end,
 	},
 	{
-		"windwp/nvim-autopairs",
-		enabled = false,
+		"m4xshen/autoclose.nvim",
 		config = function()
-			require("nvim-autopairs").setup({
-				disable_filetype = { "TelescopePrompt", "vim" },
+			require("autoclose").setup({
+				-- disable_filetype = { "TelescopePrompt", "vim" },
 			})
+		end,
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup({})
 		end,
 	},
 	{ -- Undo tree for undo visualisation

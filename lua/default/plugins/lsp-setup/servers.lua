@@ -7,6 +7,7 @@ local servers = {
 	-- Set up in dedicated plugin
 	-- rust_analyzer = {},
 	tsserver = {},
+	tailwindcss = {},
 	lua_ls = {},
 	htmx = {},
 	html = {},
