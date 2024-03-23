@@ -13,7 +13,8 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({
-				options = { theme = "gruvbox-material" },
+				-- options = { theme = "gruvbox-material" },
+				options = { theme = "catppuccin" },
 				extensions = {
 					"neo-tree",
 					"lazy",
@@ -61,13 +62,6 @@ return {
 			require("nvim-autopairs").setup({
 				disable_filetype = { "TelescopePrompt", "vim" },
 			})
-		end,
-	},
-	{
-		"kylechui/nvim-surround",
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
 		end,
 	},
 	{ -- Undo tree for undo visualisation
