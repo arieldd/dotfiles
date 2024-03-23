@@ -7,8 +7,8 @@ return {
 	},
 	enabled = true,
 	config = function()
-		require("default.plugins.ui-configs.dressing")
-		require("default.plugins.ui-configs.noice")
-		require("default.plugins.ui-configs.notify")
+		require("default.plugins.noice-setup.dressing")
+		require("default.plugins.noice-setup.noice")
+		require("default.plugins.noice-setup.notify")
 	end,
 }

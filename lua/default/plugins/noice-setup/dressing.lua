@@ -1,4 +1,4 @@
-local defaults = require("default.plugins.ui-configs.default")
+local defaults = require("default.plugins.noice-setup.default")
 
 require("dressing").setup({
 	input = {

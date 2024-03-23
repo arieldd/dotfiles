@@ -2,6 +2,7 @@ vim.notify = require("notify")
 
 require("notify").setup({
 	background_colour = "Normal",
+	fps = 30,
 	icons = {
 		DEBUG = " ",
 		ERROR = " ",
