@@ -14,6 +14,7 @@ return {
 					html = { { "prettierd", "prettier" } },
 					cpp = { "clang-format" },
 					go = { "goimports", "gofmt" },
+					["_"] = { "trim_whitespace" },
 				},
 				format_on_save = {
 					timeout_ms = 500,
@@ -21,7 +22,7 @@ return {
 				},
 			})
 
-			vim.keymap.set("n", "<leader>ff", vim.lsp.buf.format, { desc = "[Formatters] Fomat file." })
+			vim.keymap.set("n", "<leader>ff", require("conform").format, { desc = "[Formatters] Fomat file." })
 		end,
 	},
 	{
