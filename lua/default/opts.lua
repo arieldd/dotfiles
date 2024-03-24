@@ -47,7 +47,3 @@ vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
-
---vim.opt.wildmenu = true
---vim.opt.wildmode = "longest:full, list:full"
---vim.opt.wildignore = "*.o,*.obj,*.bak,*.exe,*.hi,*.dyn_hi,*.dyn_o,*.zip,*.pdf,*.gif,*.png,*.jpg,*.mp4,*mp3"

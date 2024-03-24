@@ -1,8 +1,9 @@
 local linters = {
 	"stylua",
 	"clang-format",
-	"prettierd",
+	"prettier",
 	"eslint_d",
+	"htmlhint",
 }
 
 return linters
