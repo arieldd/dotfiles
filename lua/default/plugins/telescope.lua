@@ -65,7 +65,7 @@ return {
 			pcall(require("telescope").load_extension, "file_browser")
 
 			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<C-p>", builtin.git_files, {})
+			vim.keymap.set("n", "<C-s>", builtin.git_files, {})
 
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
