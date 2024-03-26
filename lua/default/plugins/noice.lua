@@ -7,7 +7,6 @@ return {
 	},
 	enabled = true,
 	config = function()
-		require("default.plugins.noice-setup.dressing")
 		require("default.plugins.noice-setup.noice")
 		require("default.plugins.noice-setup.notify")
 	end,
