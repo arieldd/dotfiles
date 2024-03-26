@@ -18,7 +18,7 @@ return {
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{
 		"ellisonleao/gruvbox.nvim",
-		priority = 1000,
+		-- priority = 1000,
 		-- opts = {
 		-- 	integrations = {
 		-- 		telescope = true,
