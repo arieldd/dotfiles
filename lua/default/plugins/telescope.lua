@@ -35,6 +35,7 @@ return {
 
 			require("telescope").setup({
 				defaults = {
+					initial_mode = "normal",
 					layout_strategy = "center",
 					layout_config = center.layout_config,
 					sorting_strategy = "ascending",
