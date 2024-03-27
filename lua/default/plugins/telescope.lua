@@ -23,7 +23,6 @@ return {
 					entry_prefix = "   ",
 					multi_icon = "  ",
 					selection_caret = "  ",
-					border = true,
 					results_title = "",
 					prompt_title = " Prompt ",
 				},
