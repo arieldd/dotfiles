@@ -17,34 +17,13 @@ return {
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
-			local center = {
-				border = {
-					prompt = { "─", "│", " ", "│", "╭", "╮", "│", "│" },
-					results = { "─", "│", "─", "│", "├", "┤", "╯", "╰" },
-					preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
-				},
-				layout_config = {
-					preview_cutoff = 20,
-					height = 0.4,
-					anchor = "N",
-					mirror = true,
-					prompt_position = "top",
-					width = 0.5,
-				},
-			}
-
 			require("telescope").setup({
 				defaults = {
-					initial_mode = "normal",
-					layout_strategy = "center",
-					layout_config = center.layout_config,
-					sorting_strategy = "ascending",
 					prompt_prefix = "   ",
 					entry_prefix = "   ",
 					multi_icon = "  ",
 					selection_caret = "  ",
 					border = true,
-					borderchars = center.border,
 					results_title = "",
 					prompt_title = " Prompt ",
 				},
@@ -75,6 +54,7 @@ return {
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
+			vim.keymap.set("n", "<leader>st", builtin.colorscheme, { desc = "[S]earch [T]hemes" })
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
