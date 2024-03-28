@@ -30,18 +30,12 @@ return {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown({}),
 					},
-					file_browser = {
-						hijack_netrw = true,
-						path = "%:p:h",
-						default_selection_index = 2,
-					},
 				},
 			})
 
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
 			pcall(require("telescope").load_extension, "noice")
-			pcall(require("telescope").load_extension, "file_browser")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-s>", builtin.git_files, {})
