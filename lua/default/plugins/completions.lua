@@ -28,6 +28,8 @@ return {
 		local luasnip = require("luasnip")
 		luasnip.config.setup({})
 
+		require("luasnip.loaders.from_lua").lazy_load({ paths = { "./lua/default/plugins/snippets" } })
+
 		cmp.setup({
 			snippet = {
 				expand = function(args)
