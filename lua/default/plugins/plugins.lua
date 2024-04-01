@@ -19,7 +19,6 @@ return {
 					"neo-tree",
 					"lazy",
 					"mason",
-					"toggleterm",
 				},
 			})
 		end,
@@ -80,5 +79,9 @@ return {
 	},
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
+	},
+	{
+		"xiyaowong/transparent.nvim",
+		lazy = false,
 	},
 }
