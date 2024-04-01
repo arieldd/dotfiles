@@ -19,7 +19,7 @@ return {
 					"neo-tree",
 					"lazy",
 					"mason",
-					"fugitive",
+					"toggleterm",
 				},
 			})
 		end,
