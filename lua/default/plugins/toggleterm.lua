@@ -3,7 +3,7 @@ return {
 	version = "*",
 	config = function()
 		require("toggleterm").setup({
-			open_mapping = [[<leader>t]],
+			open_mapping = [[<leader>tm]],
 		})
 
 		vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
