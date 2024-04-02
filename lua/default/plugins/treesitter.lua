@@ -2,27 +2,17 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		},
 		config = function()
 			local configs = require("nvim-treesitter.configs")
+			local parsers = require("default.plugins.treesitter-setup.parsers")
+			local textobjects = require("default.plugins.treesitter-setup.textobjects")
 
 			configs.setup({
 				auto_install = true,
-				ensure_installed = {
-					"c",
-					"lua",
-					"rust",
-					"javascript",
-					"html",
-					"cpp",
-					"go",
-					"python",
-					"regex",
-					"bash",
-					"query",
-					"vimdoc",
-					"markdown",
-					"markdown_inline",
-				},
+				ensure_installed = parsers,
 				sync_install = false,
 				highlight = { enable = true },
 				indent = { enable = true },
@@ -35,7 +25,12 @@ return {
 						node_decremental = "<bs>",
 					},
 				},
+				textobjects = textobjects,
 			})
+
+			local ts_repeat_move = require("nvim-treesitter.textobjects.repeatable_move")
+			vim.keymap.set({ "n", "x", "o" }, ";", ts_repeat_move.repeat_last_move_next)
+			vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_previous)
 		end,
 	},
 	{

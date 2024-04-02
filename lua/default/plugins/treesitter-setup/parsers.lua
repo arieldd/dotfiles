@@ -1,0 +1,16 @@
+return {
+	"c",
+	"lua",
+	"rust",
+	"javascript",
+	"html",
+	"cpp",
+	"go",
+	"python",
+	"regex",
+	"bash",
+	"query",
+	"vimdoc",
+	"markdown",
+	"markdown_inline",
+}
