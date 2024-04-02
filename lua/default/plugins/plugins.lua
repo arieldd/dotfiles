@@ -80,8 +80,4 @@ return {
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
-	{
-		"xiyaowong/transparent.nvim",
-		lazy = false,
-	},
 }
