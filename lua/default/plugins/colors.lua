@@ -21,7 +21,6 @@ local function setTheme(theme_name)
 		require(theme_name).setup(opts)
 		vim.cmd.colorscheme(theme_name)
 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 		vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 	end
 end
