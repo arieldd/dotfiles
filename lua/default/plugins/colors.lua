@@ -1,14 +1,13 @@
 local color_themes = {
-	["catppuccin"] = { "catppuccin/nvim" },
-	["rose-pine"] = { "rose-pine/neovim" },
-	["gruvbox"] = { "ellisonleao/gruvbox.nvim" },
-	["gruvbox-material"] = { "f4z3r/gruvbox-material.nvim" },
+	["catppuccin"] = { "catppuccin/nvim", name = "catppuccin" },
+	["rose-pine"] = { "rose-pine/neovim", name = "rose-pine" },
+	["gruvbox"] = { "ellisonleao/gruvbox.nvim", name = "gruvbox" },
+	["gruvbox-material"] = { "f4z3r/gruvbox-material.nvim", name = "gruvbox-material" },
 }
 
 local function setTheme(theme_name)
 	local theme = color_themes[theme_name]
 
-	theme.name = theme_name
 	theme.priority = 1000
 	theme.opts = {
 		integrations = {
