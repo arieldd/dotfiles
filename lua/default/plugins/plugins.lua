@@ -8,21 +8,6 @@ return {
 			require("bufferline").setup({})
 		end,
 	},
-	{ -- Status line below
-		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("lualine").setup({
-				options = { theme = "gruvbox-material" },
-				-- options = { theme = "catppuccin" },
-				extensions = {
-					"neo-tree",
-					"lazy",
-					"mason",
-				},
-			})
-		end,
-	},
 	{ -- !! Great for showing whitespaces and indents
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
