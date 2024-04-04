@@ -33,7 +33,4 @@ return {
 			vim.keymap.set({ "n", "x", "o" }, ",", ts_repeat_move.repeat_last_move_previous)
 		end,
 	},
-	{
-		"nvim-treesitter/playground",
-	},
 }
