@@ -9,6 +9,6 @@ return {
 	},
 	config = function()
 		vim.keymap.set("n", "<leader>n", ":Neotree toggle current reveal_force_cwd left<CR>", { silent = true })
-		vim.keymap.set("n", "<leader>h", ":Neotree<CR>", { silent = true })
+		vim.keymap.set("n", "<leader>N", ":Neotree<CR>", { silent = true })
 	end,
 }
