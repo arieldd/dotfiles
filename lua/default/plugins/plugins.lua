@@ -1,13 +1,13 @@
 -- Collections of small non too config heavy plugins
 return {
-	{ -- Buffer tabs on top
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("bufferline").setup({})
-		end,
-	},
+	-- { -- Buffer tabs on top
+	-- 	"akinsho/bufferline.nvim",
+	-- 	version = "*",
+	-- 	dependencies = "nvim-tree/nvim-web-devicons",
+	-- 	config = function()
+	-- 		require("bufferline").setup({})
+	-- 	end,
+	-- },
 	{ -- !! Great for showing whitespaces and indents
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -18,7 +18,6 @@ return {
 		config = function()
 			-- Better Around/Inside textobjects
 			--
-			-- Examples:
 			--  - va)  - [V]isually select [A]round [)]paren
 			--  - yinq - [Y]ank [I]nside [N]ext [']quote
 			--  - ci'  - [C]hange [I]nside [']quote
@@ -43,7 +42,7 @@ return {
 		"m4xshen/autoclose.nvim",
 		config = function()
 			require("autoclose").setup({
-				-- disable_filetype = { "TelescopePrompt", "vim" },
+				disable_filetype = { "TelescopePrompt", "vim" },
 			})
 		end,
 	},
