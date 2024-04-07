@@ -9,15 +9,14 @@ return {
 			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
-			require("mason").setup()
-
-			require("default.plugins.lsp-setup.mappings")
-			local servers = require("default.plugins.lsp-setup.servers")
-			local linters = require("default.plugins.lsp-setup.linters")
+			require("default.plugins.lsp.setup")
+			local servers = require("default.plugins.lsp.servers")
+			local linters = require("default.plugins.lsp.linters")
 
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, linters)
 
+			require("mason").setup()
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
