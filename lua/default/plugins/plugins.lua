@@ -58,9 +58,6 @@ return {
 			vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle Undo tree" })
 		end,
 	},
-	-- {
-	-- 	"antoinemadec/FixCursorHold.nvim",
-	-- },
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
