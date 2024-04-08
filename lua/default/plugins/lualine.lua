@@ -5,8 +5,8 @@ return { -- Status line below
 		local noice = require("noice")
 
 		require("lualine").setup({
-			-- options = { theme = "gruvbox-material" },
-			options = { theme = "catppuccin" },
+			options = { theme = "gruvbox-material" },
+			-- options = { theme = "catppuccin" },
 			sections = {
 				lualine_x = {
 					{
