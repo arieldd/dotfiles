@@ -58,6 +58,11 @@ return {
 			vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Toggle Undo tree" })
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {},
+	},
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
