@@ -12,12 +12,13 @@ return {
 				end,
 			},
 			{ "nvim-telescope/telescope-ui-select.nvim" },
-
+			{ "nvim-telescope/telescope-live-grep-args.nvim" },
 			-- Useful for getting pretty icons, but requires a Nerd Font.
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 		},
 		config = function()
-			require("telescope").setup({
+			local telescope = require("telescope")
+			telescope.setup({
 				defaults = {
 					prompt_prefix = "   ",
 					entry_prefix = "   ",
@@ -33,9 +34,10 @@ return {
 				},
 			})
 
-			pcall(require("telescope").load_extension, "fzf")
-			pcall(require("telescope").load_extension, "ui-select")
-			pcall(require("telescope").load_extension, "noice")
+			telescope.load_extension("fzf")
+			telescope.load_extension("ui-select")
+			telescope.load_extension("noice")
+			telescope.load_extension("live_grep_args")
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-s>", builtin.git_files, {})
@@ -45,7 +47,12 @@ return {
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
 			vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 			vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
-			vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
+			vim.keymap.set(
+				"n",
+				"<leader>sg",
+				":lua require('telescope').extensions.live_grep_args.live_grep_args()<cr>",
+				{ desc = "[S]earch by [G]rep", silent = true }
+			)
 			vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 			vim.keymap.set("n", "<leader>st", builtin.colorscheme, { desc = "[S]earch [T]hemes" })
 			vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
