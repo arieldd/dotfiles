@@ -4,14 +4,14 @@ return { -- Status line below
 	config = function()
 		local noice = require("noice")
 
-		local symbols = require("trouble").statusline({
-			mode = "lsp_document_symbols",
-			groups = {},
-			max_items = 3,
-			title = false,
-			filter = { range = true },
-			format = "{kind_icon}{symbol.name}",
-		})
+		-- local symbols = require("trouble").statusline({
+		-- 	mode = "lsp_document_symbols",
+		-- 	groups = {},
+		-- 	max_items = 3,
+		-- 	title = false,
+		-- 	filter = { range = true },
+		-- 	format = "{kind_icon}{symbol.name}",
+		-- })
 
 		local lualine = require("lualine")
 		lualine.setup({
@@ -39,12 +39,12 @@ return { -- Status line below
 						color = { fg = "#ff9e64" },
 					},
 				},
-				lualine_c = {
-					{
-						symbols.get,
-						cond = symbols.has,
-					},
-				},
+				-- lualine_c = {
+				-- 	{
+				-- 		symbols.get,
+				-- 		cond = symbols.has,
+				-- 	},
+				-- },
 			},
 			extensions = {
 				"neo-tree",
