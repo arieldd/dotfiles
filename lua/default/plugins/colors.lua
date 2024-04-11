@@ -8,7 +8,7 @@ return {
 				integrations = {
 					harpoon = true,
 					mason = true,
-					lsp_trouble = true,
+					-- lsp_trouble = true,
 					neotree = true,
 					noice = true,
 					notify = true,
