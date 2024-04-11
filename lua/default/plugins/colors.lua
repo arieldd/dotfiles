@@ -4,6 +4,16 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
+			require("catppuccin").setup({
+				integrations = {
+					harpoon = true,
+					mason = true,
+					lsp_trouble = true,
+					neotree = true,
+					noice = true,
+					notify = true,
+				},
+			})
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},

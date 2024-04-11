@@ -1,6 +1,7 @@
 return {
 	{
 		"nvim-telescope/telescope.nvim",
+		event = "VimEnter",
 		branch = "0.1.x",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -39,11 +40,11 @@ return {
 				},
 			})
 
-			telescope.load_extension("fzf")
-			telescope.load_extension("ui-select")
-			telescope.load_extension("notify")
-			telescope.load_extension("noice")
-			telescope.load_extension("live_grep_args")
+			pcall(telescope.load_extension("fzf"))
+			pcall(telescope.load_extension("ui-select"))
+			pcall(telescope.load_extension("notify"))
+			pcall(telescope.load_extension("noice"))
+			pcall(telescope.load_extension("live_grep_args"))
 
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-s>", builtin.git_files, {})
