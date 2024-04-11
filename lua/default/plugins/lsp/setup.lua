@@ -12,6 +12,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("gi", telescope_builtin.lsp_implementations, "[G]oto [I]mplementation")
 		map("gr", telescope_builtin.lsp_references, "[G]oto [R]eferences")
 		map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
+		map("<leader>fc", vim.lsp.buf.code_action, "[F]ix [C]ode")
 		map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 		map("<leader>ds", telescope_builtin.lsp_document_symbols, "[D]ocument [S]ymbols")
 		map("<leader>ws", telescope_builtin.lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")

@@ -6,7 +6,11 @@ return {
 	},
 	enabled = true,
 	config = function()
-		require("default.plugins.noice-setup.noice")
-		require("default.plugins.noice-setup.notify")
+		require("noice").setup({})
+		require("notify").setup({
+			render = "wrapped-compact",
+			stages = "fade",
+			timeout = 3000,
+		})
 	end,
 }
