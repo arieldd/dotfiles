@@ -14,7 +14,7 @@ return {
 		},
 		{
 			"<leader>xs",
-			"<cmd>Trouble symbols toggle<cr>",
+			"<cmd>Trouble symbols toggle pinned=true results.win.relative=win <cr>",
 			desc = "Symbols (Trouble)",
 		},
 		{

@@ -18,6 +18,7 @@ return {
 		},
 		config = function()
 			local telescope = require("telescope")
+			local open_with_trouble = require("trouble.sources.telescope").open
 			telescope.setup({
 				defaults = {
 					prompt_prefix = "   ",
@@ -26,6 +27,10 @@ return {
 					selection_caret = "  ",
 					results_title = "",
 					prompt_title = " Prompt ",
+					mappings = {
+						i = { ["<c-t>"] = open_with_trouble },
+						n = { ["<c-t>"] = open_with_trouble },
+					},
 				},
 				extensions = {
 					["ui-select"] = {
