@@ -48,3 +48,6 @@ vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
+
+-- Enable Nerdfont support
+vim.g.have_nerd_font = true
