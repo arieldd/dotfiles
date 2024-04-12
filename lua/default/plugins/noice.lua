@@ -9,7 +9,7 @@ return {
 		require("noice").setup({})
 		require("notify").setup({
 			render = "wrapped-compact",
-			stages = "fade",
+			stages = "static",
 			timeout = 3000,
 		})
 	end,
