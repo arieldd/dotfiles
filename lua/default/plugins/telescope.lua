@@ -32,6 +32,10 @@ return {
 						i = { ["<c-t>"] = open_with_trouble },
 						n = { ["<c-t>"] = open_with_trouble },
 					},
+					layout_config = {
+						prompt_position = "top",
+					},
+					path_display = { "smart" },
 				},
 				extensions = {
 					["ui-select"] = {

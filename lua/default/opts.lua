@@ -4,7 +4,8 @@ vim.opt.relativenumber = true
 vim.opt.mouse = "a"
 vim.opt.showmode = false
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.backspace = "indent,eol,start"
+vim.opt.clipboard:append("unnamedplus")
 
 -- Tab / indentation
 vim.opt.tabstop = 4

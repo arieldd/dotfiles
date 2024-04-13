@@ -9,7 +9,7 @@ return {
 					harpoon = true,
 					mason = true,
 					-- lsp_trouble = true,
-					neotree = true,
+					nvimtree = true,
 					noice = true,
 					notify = true,
 				},
