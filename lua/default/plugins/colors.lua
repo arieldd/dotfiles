@@ -8,11 +8,14 @@ return {
 				integrations = {
 					harpoon = true,
 					mason = true,
-					-- lsp_trouble = true,
-					nvimtree = true,
 					noice = true,
 					notify = true,
 				},
+				custom_highlights = function(colors)
+					return {
+						TelescopePromptBorder = { fg = colors.peach },
+					}
+				end,
 			})
 			vim.cmd.colorscheme("catppuccin")
 		end,
