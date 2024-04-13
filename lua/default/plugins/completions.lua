@@ -19,9 +19,10 @@ return {
 				},
 			},
 		},
-		"saadparwaiz1/cmp_luasnip",
 		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
+		"saadparwaiz1/cmp_luasnip",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -41,8 +42,6 @@ return {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
-
-			completion = { completeopt = "menu,menuone,noinsert" },
 
 			mapping = cmp.mapping.preset.insert({
 				["<C-n>"] = cmp.mapping.select_next_item(),
@@ -74,6 +73,7 @@ return {
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
+				{ name = "buffer" },
 				{ name = "path" },
 			},
 		})
