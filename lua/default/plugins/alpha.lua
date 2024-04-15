@@ -73,7 +73,7 @@ return {
 				local count = (math.floor(stats.startuptime * 100) / 100)
 				dashboard.section.footer.val = {
 					" ",
-					"󱐌 " .. stats.count .. " plugins loaded in " .. count .. " ms",
+					"󱐌 " .. stats.loaded .. "/" .. stats.count .. " plugins loaded in " .. count .. " ms",
 					" ",
 				}
 				pcall(vim.cmd.AlphaRedraw)
