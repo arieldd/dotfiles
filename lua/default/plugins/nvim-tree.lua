@@ -15,12 +15,12 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<leader>fe", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle [F]ile [e]xplorer." })
+		vim.keymap.set("n", "<leader>se", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle [S]how [e]xplorer." })
 		vim.keymap.set(
 			"n",
-			"<leader>ff",
+			"<leader>sf",
 			"<cmd>NvimTreeFindFileToggle<CR>",
-			{ desc = "Toggle [F]ile explorer on current [f]ile." }
+			{ desc = "Toggle [S]how explorer on current [f]ile." }
 		)
 	end,
 }
