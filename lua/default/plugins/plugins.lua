@@ -1,13 +1,5 @@
 -- Collections of small non too config heavy plugins
 return {
-	-- { -- Buffer tabs on top
-	-- 	"akinsho/bufferline.nvim",
-	-- 	version = "*",
-	-- 	dependencies = "nvim-tree/nvim-web-devicons",
-	-- 	config = function()
-	-- 		require("bufferline").setup({})
-	-- 	end,
-	-- },
 	{ -- !! Great for showing whitespaces and indents
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -59,6 +51,23 @@ return {
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
+	},
+	{
+		"gsuuon/note.nvim",
+		config = function()
+			require("note").setup({
+				opts = {
+					spaces = {
+						"~/ws",
+					},
+					keymap = {
+						prefix = "<leader>n",
+					},
+				},
+				cmd = "Note",
+				ft = "note",
+			})
+		end,
 	},
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
