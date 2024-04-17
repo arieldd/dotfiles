@@ -52,23 +52,6 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
-	{
-		"gsuuon/note.nvim",
-		config = function()
-			require("note").setup({
-				opts = {
-					spaces = {
-						"~/ws",
-					},
-					keymap = {
-						prefix = "<leader>n",
-					},
-				},
-				cmd = "Note",
-				ft = "note",
-			})
-		end,
-	},
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
