@@ -5,7 +5,7 @@ local servers = {
 	gopls = {},
 	pyright = {},
 	-- Set up in dedicated plugin
-	-- rust_analyzer = {},
+	rust_analyzer = {},
 	tsserver = {},
 	tailwindcss = {},
 	lua_ls = {},
