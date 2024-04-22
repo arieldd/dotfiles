@@ -7,7 +7,7 @@ return { -- Status line below
 		local symbols = require("trouble").statusline({
 			mode = "lsp_document_symbols",
 			groups = {},
-			max_items = 3,
+			-- max_items = 3,
 			title = false,
 			filter = { range = true },
 			format = "{kind_icon}{symbol.name}",
