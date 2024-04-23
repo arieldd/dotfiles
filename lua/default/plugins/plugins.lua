@@ -52,6 +52,11 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
+	{
+		"folke/persistence.nvim",
+		event = "BufReadPre",
+		opts = {},
+	},
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
