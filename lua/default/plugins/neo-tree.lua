@@ -7,7 +7,9 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		require("neo-tree").setup({})
+		require("neo-tree").setup({
+			popup_border_style = "rounded",
+		})
 
 		vim.keymap.set("n", "-", ":Neotree filesystem toggle reveal float<CR>", { silent = true })
 		vim.keymap.set(

@@ -37,7 +37,7 @@ return { -- Status line below
 				},
 			},
 			extensions = {
-				"nvim-tree",
+				"neo-tree",
 				"lazy",
 				"mason",
 				"trouble",
