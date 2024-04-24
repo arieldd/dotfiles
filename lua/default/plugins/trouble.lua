@@ -45,5 +45,7 @@ return {
 				},
 			},
 		})
+
+		require("trouble").setup({})
 	end,
 }
