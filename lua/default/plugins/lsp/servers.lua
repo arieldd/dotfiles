@@ -1,16 +1,16 @@
-local servers = {
+local M = {
 	clangd = {
 		filetypes = { "c", "cpp", "objc", "objcpp" },
 	},
 	gopls = {},
-	pyright = {},
-	-- Set up in dedicated plugin
-	rust_analyzer = {},
-	tsserver = {},
-	tailwindcss = {},
-	lua_ls = {},
-	htmx = {},
 	html = {},
+	htmx = {},
+	lua_ls = {},
+	pyright = {},
+	rust_analyzer = {},
+	tailwindcss = {},
+	templ = {},
+	tsserver = {},
 }
 
-return servers
+return M

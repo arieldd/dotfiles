@@ -1,16 +1,26 @@
-return {
+local M = {
+	"bash",
 	"c",
-	"lua",
-	"rust",
-	"javascript",
-	"html",
 	"cpp",
 	"go",
-	"python",
-	"regex",
-	"bash",
-	"query",
-	"vimdoc",
+	"html",
+	"javascript",
+	"lua",
 	"markdown",
 	"markdown_inline",
+	"python",
+	"query",
+	"regex",
+	"templ",
+	"rust",
+	"vimdoc",
 }
+
+-- Register '.templ' file extension
+vim.filetype.add({
+	extension = {
+		templ = "templ",
+	},
+})
+
+return M
