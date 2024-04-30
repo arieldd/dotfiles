@@ -25,7 +25,11 @@ return {
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
 
+			-- Auto close pairs
 			require("mini.pairs").setup()
+
+			-- Move text around
+			require("mini.move").setup()
 		end,
 	},
 	{ -- Toggle comments and such
