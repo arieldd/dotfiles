@@ -24,6 +24,8 @@ return {
 			-- - sd'   - [S]urround [D]elete [']quotes
 			-- - sr)'  - [S]urround [R]eplace [)] [']
 			require("mini.surround").setup()
+
+			require("mini.pairs").setup()
 		end,
 	},
 	{ -- Toggle comments and such
@@ -31,14 +33,6 @@ return {
 		opts = {},
 		config = function()
 			require("Comment").setup()
-		end,
-	},
-	{
-		"m4xshen/autoclose.nvim",
-		config = function()
-			require("autoclose").setup({
-				disable_filetype = { "TelescopePrompt", "vim" },
-			})
 		end,
 	},
 	{ -- Undo tree for undo visualisation
