@@ -5,7 +5,10 @@ return { -- Status line below
 		local noice = require("noice")
 		local lualine = require("lualine")
 		lualine.setup({
-			options = { theme = "catppuccin" },
+			options = {
+				-- theme = "catppuccin",
+				theme = "gruvbox-material",
+			},
 			sections = {
 				lualine_c = {
 					{
