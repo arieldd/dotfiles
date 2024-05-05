@@ -8,6 +8,7 @@ return { -- Status line below
 			options = {
 				-- theme = "catppuccin",
 				theme = "gruvbox-material",
+				-- theme = "everforest",
 			},
 			sections = {
 				lualine_c = {
