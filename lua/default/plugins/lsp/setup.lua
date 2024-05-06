@@ -32,7 +32,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			end
 			if client.server_capabilities.inlayHintProvider then
 				map("<leader>hh", function()
-					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(event.buf), { event.buf })
+					vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ event.buf }), { event.buf })
 				end, "Toggle inlay [h]ints")
 			end
 		end
