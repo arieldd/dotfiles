@@ -8,8 +8,8 @@ return {
 		},
 		config = function()
 			local configs = require("nvim-treesitter.configs")
-			local parsers = require("default.plugins.treesitter-setup.parsers")
-			local textobjects = require("default.plugins.treesitter-setup.textobjects")
+			local parsers = require("core.plugins.treesitter.parsers")
+			local textobjects = require("core.plugins.treesitter.textobjects")
 
 			configs.setup({
 				auto_install = true,

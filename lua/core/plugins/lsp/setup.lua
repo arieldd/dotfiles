@@ -1,7 +1,7 @@
 local telescope_builtin = require("telescope.builtin")
 
 vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("DefaultLspConfig", { clear = true }),
+	group = vim.api.nvim_create_augroup("CoreLspConfig", { clear = true }),
 	callback = function(event)
 		local map = function(keys, func, desc)
 			vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })

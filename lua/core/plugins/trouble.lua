@@ -33,7 +33,7 @@ return {
 			desc = "Quickfix List (Trouble)",
 		},
 	},
-	opts = {}, -- for default options, refer to the configuration section for custom setup.
+	opts = {},
 	config = function()
 		vim.diagnostic.config({
 			signs = {

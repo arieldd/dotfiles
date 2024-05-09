@@ -8,9 +8,9 @@ return {
 			{ "folke/neodev.nvim", opts = {} },
 		},
 		config = function()
-			require("default.plugins.lsp.setup")
-			local servers = require("default.plugins.lsp.servers")
-			local linters = require("default.plugins.lsp.linters")
+			require("core.plugins.lsp.setup")
+			local servers = require("core.plugins.lsp.servers")
+			local linters = require("core.plugins.lsp.linters")
 
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, linters)
