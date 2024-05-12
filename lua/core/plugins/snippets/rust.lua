@@ -11,7 +11,7 @@ return {
 			[[    if args.len() < 2 {]],
 			[[        panic!("Please provide an input file.")]],
 			[[    }]],
-			[[    let input = fs::read_to_string(&args[1]).unwrap();]],
+			[[    let input = fs::read_to_string(&args[1]).expect("Should be able to read input file");]],
 			[[    let lines = input.lines().collect::<Vec<_>>();]],
 			[[    println!("Part 1: {}", part1(&lines));]],
 			[[    println!("Part 2: {}", part2(&lines));]],

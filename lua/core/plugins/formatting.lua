@@ -22,7 +22,7 @@ return {
 				},
 			})
 
-			vim.keymap.set("n", "<leader>fm", require("conform").format, { desc = "[Formatters] Fomat file." })
+			vim.keymap.set("n", "<leader>fm", require("conform").format, { desc = "[Formatters] For[m]at file." })
 		end,
 	},
 	{
