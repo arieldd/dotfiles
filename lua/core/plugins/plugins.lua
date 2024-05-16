@@ -32,13 +32,6 @@ return {
 			require("mini.move").setup()
 		end,
 	},
-	{ -- Toggle comments and such
-		"numToStr/Comment.nvim",
-		opts = {},
-		config = function()
-			require("Comment").setup()
-		end,
-	},
 	{ -- Undo tree for undo visualisation
 		"mbbill/undotree",
 		config = function()
