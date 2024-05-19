@@ -35,7 +35,6 @@ vim.opt.colorcolumn = "80"
 
 -- Appearance
 vim.opt.cursorline = true
-vim.opt.completeopt = "menuone,noinsert,noselect"
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
