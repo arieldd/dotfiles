@@ -51,4 +51,11 @@ return {
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+		opts = {
+			disabled_filetypes = { "neo-tree" },
+		},
+	},
 }

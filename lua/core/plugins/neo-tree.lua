@@ -9,6 +9,14 @@ return {
 	config = function()
 		require("neo-tree").setup({
 			popup_border_style = "rounded",
+			event_handlers = {
+				{
+					event = "neo_tree_buffer_enter",
+					handler = function()
+						vim.opt.relativenumber = true
+					end,
+				},
+			},
 		})
 
 		vim.keymap.set("n", "-", ":Neotree filesystem toggle reveal float<CR>", { silent = true })
