@@ -5,7 +5,7 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			{ "folke/neodev.nvim", opts = {} },
+			{ "folke/lazydev.nvim", ft = "lua" },
 		},
 		config = function()
 			require("core.plugins.lsp.setup")
