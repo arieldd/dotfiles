@@ -73,6 +73,7 @@ return {
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "lazydev", group_index = 0 }, -- for Lua files
 			},
 		})
 
