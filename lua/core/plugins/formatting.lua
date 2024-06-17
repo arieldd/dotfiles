@@ -24,7 +24,7 @@ return {
 				-- },
 			})
 
-			vim.keymap.set("n", "<leader>ff", require("conform").format, { desc = "[Formatters] [F]ormat file." })
+			vim.keymap.set("n", "<leader>ff", require("conform").format, { desc = "Formatter: [f]ormat file." })
 		end,
 	},
 	{
@@ -45,7 +45,7 @@ return {
 				typescriptreact = { "eslint_d" },
 			}
 
-			vim.keymap.set("n", "<leader>fl", require("lint").try_lint, { desc = "[Formatters] [L]int file." })
+			vim.keymap.set("n", "<leader>fl", require("lint").try_lint, { desc = "Formatter: Try [l]int." })
 		end,
 	},
 }
