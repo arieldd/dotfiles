@@ -10,8 +10,9 @@ return {
 				formatters_by_ft = {
 					lua = { "stylua" },
 					python = { "isort", "black" },
-					javascript = { "prettier" },
-					html = { "prettier" },
+					javascript = { "prettierd" },
+					json = { "prettierd" },
+					html = { "prettierd" },
 					cpp = { "clang-format" },
 					go = { "goimports", "gofmt" },
 					cmake = { "cmake_format" },
@@ -39,6 +40,7 @@ return {
 				javascript = { "eslint_d" },
 				html = { "htmlhint" },
 				typescript = { "eslint_d" },
+				json = { "eslint_d" },
 				javascriptreact = { "eslint_d" },
 				typescriptreact = { "eslint_d" },
 			}
