@@ -14,6 +14,7 @@ return {
 					html = { "prettier" },
 					cpp = { "clang-format" },
 					go = { "goimports", "gofmt" },
+					cmake = { "cmake_format" },
 					["_"] = { "trim_whitespace" },
 				},
 				format_on_save = {

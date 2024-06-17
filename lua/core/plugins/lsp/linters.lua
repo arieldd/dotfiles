@@ -1,7 +1,7 @@
 local linters = {
 	"stylua",
 	"clang-format",
-	"prettier",
+	"cmakelang",
 	"eslint_d",
 	"htmlhint",
 }

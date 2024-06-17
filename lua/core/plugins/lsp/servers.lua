@@ -2,6 +2,7 @@ local M = {
 	clangd = {
 		filetypes = { "c", "cpp", "objc", "objcpp" },
 	},
+	cmake = {},
 	gopls = {},
 	html = {},
 	htmx = {},
