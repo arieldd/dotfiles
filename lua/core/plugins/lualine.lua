@@ -6,9 +6,7 @@ return { -- Status line below
 		local lualine = require("lualine")
 		lualine.setup({
 			options = {
-				theme = "catppuccin",
-				-- theme = "gruvbox-material",
-				-- theme = "everforest",
+				theme = "auto",
 			},
 			sections = {
 				lualine_c = {
