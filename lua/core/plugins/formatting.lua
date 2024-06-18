@@ -18,10 +18,10 @@ return {
 					cmake = { "cmake_format" },
 					["_"] = { "trim_whitespace" },
 				},
-				-- format_on_save = {
-				-- 	timeout_ms = 500,
-				-- 	lsp_fallback = true,
-				-- },
+				format_on_save = {
+					timeout_ms = 500,
+					lsp_fallback = true,
+				},
 			})
 
 			vim.keymap.set("n", "<leader>ff", require("conform").format, { desc = "Formatter: [f]ormat file." })
