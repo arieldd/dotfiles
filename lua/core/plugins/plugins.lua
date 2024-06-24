@@ -51,6 +51,14 @@ return {
 	{ -- Vim training game
 		"ThePrimeagen/vim-be-good",
 	},
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
 	-- {
 	-- 	"m4xshen/hardtime.nvim",
 	-- 	dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
