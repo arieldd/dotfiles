@@ -10,9 +10,10 @@ return {
 				formatters_by_ft = {
 					lua = { "stylua" },
 					python = { "isort", "black" },
-					javascript = { "prettierd", "prettier" },
-					json = { "prettierd", "prettier" },
 					html = { "prettierd", "prettier" },
+					javascript = { "prettierd", "prettier" },
+					css = { "prettierd", "prettier" },
+					json = { "prettierd", "prettier" },
 					cpp = { "clang-format" },
 					go = { "goimports", "gofmt" },
 					cmake = { "cmake_format" },
@@ -37,9 +38,10 @@ return {
 			local linters = require("lint")
 
 			linters.linters_by_ft = {
-				javascript = { "eslint_d" },
 				html = { "htmlhint" },
+				javascript = { "eslint_d" },
 				typescript = { "eslint_d" },
+				css = { "eslint_d" },
 				json = { "eslint_d" },
 				javascriptreact = { "eslint_d" },
 				typescriptreact = { "eslint_d" },
