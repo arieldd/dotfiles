@@ -13,6 +13,7 @@ local M = {
 	"regex",
 	"templ",
 	"rust",
+	"vim",
 	"vimdoc",
 }
 

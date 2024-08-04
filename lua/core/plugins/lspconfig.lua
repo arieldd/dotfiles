@@ -35,6 +35,10 @@ return {
 					end,
 				},
 			})
+
+			if vim.fn.has("macunix") then
+				require("lspconfig").sourcekit.setup({})
+			end
 		end,
 	},
 }
