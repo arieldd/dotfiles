@@ -7,6 +7,7 @@ local M = {
 	html = {},
 	htmx = {},
 	lua_ls = {},
+	ols = {},
 	pyright = {},
 	rust_analyzer = {},
 	tailwindcss = {},
