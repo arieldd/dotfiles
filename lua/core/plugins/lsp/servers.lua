@@ -12,7 +12,7 @@ local M = {
 	rust_analyzer = {},
 	tailwindcss = {},
 	templ = {},
-	tsserver = {},
+	ts_ls = {},
 }
 
 return M
