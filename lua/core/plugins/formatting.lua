@@ -12,6 +12,7 @@ return {
 					python = { "isort", "black" },
 					html = { "prettierd", "prettier" },
 					javascript = { "prettierd", "prettier" },
+					typescript = { "prettierd", "prettier" },
 					css = { "prettierd", "prettier" },
 					json = { "prettierd", "prettier" },
 					cpp = { "clang-format" },
