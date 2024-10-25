@@ -38,9 +38,10 @@ return { -- Status line below
 				},
 			},
 			extensions = {
-				"neo-tree",
 				"lazy",
 				"mason",
+				"neo-tree",
+				"oil",
 				"trouble",
 			},
 		})

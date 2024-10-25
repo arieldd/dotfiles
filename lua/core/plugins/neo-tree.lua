@@ -17,14 +17,16 @@ return {
 					end,
 				},
 			},
+			filesystem = {
+				hijack_netrw_behavior = "disabled",
+			},
 		})
 
-		vim.keymap.set("n", "-", ":Neotree filesystem toggle reveal float<CR>", { silent = true })
 		vim.keymap.set(
 			"n",
 			"<leader>-",
-			":Neotree filesystem toggle float<CR>",
-			{ silent = true, desc = "Reveal filesystem tree" }
+			":Neotree filesystem toggle reveal float<CR>",
+			{ silent = true, desc = "Reveal parent directory with NeoTree on a floating window." }
 		)
 	end,
 }

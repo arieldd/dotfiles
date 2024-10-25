@@ -16,6 +16,7 @@ return {
 					css = { "prettierd", "prettier" },
 					json = { "prettierd", "prettier" },
 					cpp = { "clang-format" },
+					c = { "clang-format" },
 					go = { "goimports", "gofmt" },
 					cmake = { "cmake_format" },
 					["_"] = { "trim_whitespace" },
