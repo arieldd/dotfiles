@@ -10,7 +10,9 @@ return {
 			},
 			keymaps = {
 				["<C-h>"] = false,
+				["<C-p>"] = false,
 			},
+			constrain_cursor = "name",
 		})
 
 		vim.keymap.set("n", "-", ":Oil<CR>", { silent = true, desc = "Open parent directory" })
