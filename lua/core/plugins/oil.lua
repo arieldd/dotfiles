@@ -13,6 +13,8 @@ return {
 			keymaps = {
 				["<C-h>"] = false,
 				["<C-p>"] = false,
+				["<C-l>"] = "actions.preview",
+				["<C-r>"] = "actions.refresh",
 			},
 			constrain_cursor = "name",
 		})
