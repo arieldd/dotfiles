@@ -19,6 +19,7 @@ return {
 		},
 		config = function()
 			local telescope = require("telescope")
+			local actions = require("telescope.actions")
 			local open_with_trouble = require("trouble.sources.telescope").open
 			telescope.setup({
 				defaults = {
@@ -28,9 +29,16 @@ return {
 					selection_caret = "  ",
 					results_title = "",
 					prompt_title = " Prompt ",
+					path_display = { "smart" },
 					mappings = {
-						i = { ["<c-t>"] = open_with_trouble },
-						n = { ["<c-t>"] = open_with_trouble },
+						i = {
+							["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+							["<C-t>"] = open_with_trouble,
+						},
+						n = {
+							["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+							["<C-t>"] = open_with_trouble,
+						},
 					},
 					layout_config = {
 						prompt_position = "top",
