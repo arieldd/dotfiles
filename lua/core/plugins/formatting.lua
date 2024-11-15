@@ -19,6 +19,7 @@ return {
 					c = { "clang-format" },
 					go = { "goimports", "gofmt" },
 					cmake = { "cmake_format" },
+					zig = { "zigfmt" },
 					["_"] = { "trim_whitespace" },
 				},
 				format_on_save = function(bufnr)
