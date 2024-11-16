@@ -14,6 +14,7 @@ vim.keymap.set("v", "<leader>d", '"_d')
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+vim.keymap.set("n", "<leader>ww", ":w<CR>", { desc = "Save file." })
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic [E]rror messages" })

@@ -44,9 +44,6 @@ return {
 						prompt_position = "top",
 					},
 					sorting_strategy = "ascending",
-					path_display = {
-						truncate = 3,
-					},
 				},
 				extensions = {
 					["ui-select"] = {
