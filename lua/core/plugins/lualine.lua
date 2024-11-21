@@ -13,7 +13,7 @@ return { -- Status line below
 					{
 						"filename",
 						file_status = true,
-						path = 1,
+						path = 4,
 					},
 				},
 				lualine_x = {
