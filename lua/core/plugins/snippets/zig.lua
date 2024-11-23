@@ -40,6 +40,7 @@ return {
 			[[]],
 			[[    var iter = splitSeq(u8, content, "\n");]],
 			[[    while (iter.next()) |line| {]],
+			[[        if (line.len == 0) break;]],
 			[[        try lines.append(line);]],
 			[[    }]],
 			[[]],

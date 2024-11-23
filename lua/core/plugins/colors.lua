@@ -23,12 +23,12 @@ return {
 	{
 		"sainnhe/gruvbox-material",
 		name = "gruvbox-material",
-		priority = 1000,
-		config = function()
-			vim.g.gruvbox_material_enable_italic = 1
-			vim.g.gruvbox_material_float_style = "dim"
-			vim.cmd.colorscheme("gruvbox-material")
-		end,
+		-- priority = 1000,
+		-- config = function()
+		-- 	vim.g.gruvbox_material_enable_italic = 1
+		-- 	vim.g.gruvbox_material_float_style = "dim"
+		-- 	vim.cmd.colorscheme("gruvbox-material")
+		-- end,
 	},
 	{
 		"sainnhe/everforest",
@@ -42,10 +42,10 @@ return {
 	{
 		"folke/tokyonight.nvim",
 		name = "tokyonight",
-		-- priority = 1000,
-		-- opts = {},
-		-- config = function()
-		-- 	vim.cmd.colorscheme("tokyonight")
-		-- end,
+		priority = 1000,
+		opts = {},
+		config = function()
+			vim.cmd.colorscheme("tokyonight")
+		end,
 	},
 }
