@@ -8,7 +8,6 @@ return {
 			[[using namespace std;]],
 			[[]],
 			[[#define ll long long]],
-			[[#define arr array]],
 			[[]],
 			[[vector<string> read_input(const string &filename) {]],
 			[[  vector<string> lines{};]],

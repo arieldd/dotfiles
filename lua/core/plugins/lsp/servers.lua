@@ -10,6 +10,7 @@ local M = {
 	ols = {},
 	pyright = {},
 	rust_analyzer = {},
+	ts_ls = {},
 	tailwindcss = {},
 	templ = {},
 	zls = {},
