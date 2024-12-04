@@ -25,7 +25,7 @@ return {
 		vim.keymap.set(
 			"n",
 			"<leader>-",
-			":Neotree filesystem toggle reveal float<CR>",
+			":Neotree filesystem toggle reveal left<CR>",
 			{ silent = true, desc = "Reveal parent directory with NeoTree on a floating window." }
 		)
 	end,
