@@ -28,7 +28,27 @@ return {
 			[[  auto lines = read_input(argv[1]);]],
 			[[  for (auto const &l : lines)]],
 			[[    cout << l << '\n';]],
+			[[  cout << "Part 1:" << part1(lines) << '\n';]],
+			[[  cout << "Part 2:" << part2(lines) << '\n';]],
 			[[  return 0;]],
+			[[}]],
+		}),
+	}),
+	ls.snippet("adj4", {
+		ls.text_node({
+			[[const vector<pair<int, int>> adj4 = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};]],
+		}),
+	}),
+	ls.snippet("adj8", {
+		ls.text_node({
+			[[const vector<pair<int, int>> adj8 = {{0, 1},  {1, 1},   {1, 0},  {1, -1},]],
+			[[                                     {0, -1}, {-1, -1}, {-1, 0}, {-1, 1}};]],
+		}),
+	}),
+	ls.snippet("valid_pos", {
+		ls.text_node({
+			[[inline bool is_valid_pos(int i, int j, int r, int c) {]],
+			[[  return i >= 0 && j >= 0 && i < r && j < c;]],
 			[[}]],
 		}),
 	}),
