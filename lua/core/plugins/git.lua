@@ -12,20 +12,21 @@ return {
 			lazygit = {},
 			gitbrowse = {},
 		},
-		config = function()
-			vim.keymap.set(
-				"n",
+		keys = {
+			{
 				"<leader>gl",
-				":lua Snacks.lazygit.open()<CR>",
-				{ desc = "Open LazyGit or [g]it [l]azy", silent = true }
-			)
-
-			vim.keymap.set(
-				"n",
+				function()
+					Snacks.lazygit()
+				end,
+				desc = "Open LazyGit or [g]it [l]azy",
+			},
+			{
 				"<leader>gb",
-				":lua Snacks.gitbrowse.open()<CR>",
-				{ desc = "Open remote repo or [g]it [b]rowse", silent = true }
-			)
-		end,
+				function()
+					Snacks.gitbrowse()
+				end,
+				desc = "Open remote repo or [g]it [b]rowse",
+			},
+		},
 	},
 }
