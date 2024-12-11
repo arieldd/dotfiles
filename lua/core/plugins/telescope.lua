@@ -20,6 +20,7 @@ return {
 		config = function()
 			local telescope = require("telescope")
 			local actions = require("telescope.actions")
+			local lga_actions = require("telescope-live-grep-args.actions")
 			local open_with_trouble = require("trouble.sources.telescope").open
 			telescope.setup({
 				defaults = {
@@ -34,6 +35,7 @@ return {
 						i = {
 							["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
 							["<C-t>"] = open_with_trouble,
+							["<C-k>"] = lga_actions.quote_prompt(),
 						},
 						n = {
 							["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
@@ -52,7 +54,7 @@ return {
 				},
 			})
 
-			-- pcall(telescope.load_extension("fzf"))
+			pcall(telescope.load_extension("fzf"))
 			pcall(telescope.load_extension("ui-select"))
 			pcall(telescope.load_extension("notify"))
 			pcall(telescope.load_extension("noice"))
