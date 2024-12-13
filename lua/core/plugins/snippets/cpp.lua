@@ -3,11 +3,13 @@ local ls = require("luasnip")
 return {
 	ls.snippet("aoc", {
 		ls.text_node({
-			[[#include <bits/stdc++.h>]],
+			[[#include "utils.h"]],
 			[[#include <cassert>]],
 			[[using namespace std;]],
+			[[using namespace aoc_utils;]],
 			[[]],
 			[[#define ll long long]],
+			[[#define arr array]],
 			[[]],
 			[[vector<string> read_input(const string &filename) {]],
 			[[  vector<string> lines{};]],
