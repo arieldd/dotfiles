@@ -6,6 +6,7 @@ local M = {
 	"html",
 	"javascript",
 	"lua",
+	"latex",
 	"markdown",
 	"markdown_inline",
 	"python",
