@@ -45,3 +45,6 @@ vim.opt.splitbelow = true
 
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 500
+
+-- Global completion options
+vim.opt.completeopt = "menuone,noinsert,noselect"

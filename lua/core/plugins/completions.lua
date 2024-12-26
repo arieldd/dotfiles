@@ -1,83 +1,60 @@
 return {
-	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
-	dependencies = {
-		{
-			"L3MON4D3/LuaSnip",
-			build = (function()
-				if vim.fn.has("win32") == 1 or vim.fn.executable("make") == 0 then
-					return
-				end
-				return "make install_jsregexp"
-			end)(),
-			dependencies = {
-				{
+	{
+		"saghen/blink.cmp",
+		dependencies = {
+			{
+				"L3MON4D3/LuaSnip",
+				dependencies = {
 					"rafamadriz/friendly-snippets",
 					config = function()
 						require("luasnip.loaders.from_vscode").lazy_load()
 					end,
 				},
-			},
-		},
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-path",
-		"saadparwaiz1/cmp_luasnip",
-		"onsails/lspkind.nvim",
-	},
-	config = function()
-		local luasnip = require("luasnip")
-		luasnip.config.setup({})
-		require("luasnip.loaders.from_lua").lazy_load({ paths = { "./lua/core/plugins/snippets" } })
-
-		local lspkind = require("lspkind")
-		lspkind.init({})
-
-		local cmp = require("cmp")
-		cmp.setup({
-			snippet = {
-				expand = function(args)
-					luasnip.lsp_expand(args.body)
+				config = function()
+					require("luasnip").config.setup({})
+					require("luasnip.loaders.from_lua").lazy_load({ paths = { "./lua/core/plugins/snippets" } })
 				end,
 			},
-
-			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
+		},
+		version = "*",
+		opts = {
+			keymap = {
+				preset = "default",
+				["<CR>"] = { "accept", "fallback" },
+				["<C-h>"] = { "snippet_backward", "fallback" },
+				["<C-l>"] = { "snippet_forward", "fallback" },
 			},
-
-			mapping = cmp.mapping.preset.insert({
-				["<C-n>"] = cmp.mapping.select_next_item(),
-				["<C-p>"] = cmp.mapping.select_prev_item(),
-				["<C-b>"] = cmp.mapping.scroll_docs(-4),
-				["<C-f>"] = cmp.mapping.scroll_docs(4),
-				["<CR>"] = cmp.mapping.confirm({ select = true }),
-				["<C-Space>"] = cmp.mapping.complete({}),
-
-				["<C-l>"] = cmp.mapping(function()
-					if luasnip.expand_or_locally_jumpable() then
-						luasnip.expand_or_jump()
-					end
-				end, { "i", "s" }),
-				["<C-h>"] = cmp.mapping(function()
-					if luasnip.locally_jumpable(-1) then
-						luasnip.jump(-1)
-					end
-				end, { "i", "s" }),
-			}),
-			formatting = {
-				format = lspkind.cmp_format({}),
+			completion = {
+				list = {
+					selection = "auto_insert",
+				},
+				menu = {
+					auto_show = function(ctx)
+						return ctx.mode ~= "cmdline"
+					end,
+					draw = {
+						columns = { { "kind_icon", "label", gap = 1 }, { "label_description", "kind", gap = 1 } },
+					},
+				},
 			},
 			sources = {
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
-				{ name = "buffer" },
-				{ name = "path" },
-				{ name = "lazydev", group_index = 0 }, -- for Lua files
+				default = { "lsp", "path", "buffer", "luasnip" },
 			},
-		})
-
-		-- Set global vim completion options
-		vim.opt.completeopt = "menuone,noinsert,noselect"
-	end,
+			signature = { enabled = true },
+			snippets = {
+				expand = function(snippet)
+					require("luasnip").lsp_expand(snippet)
+				end,
+				active = function(filter)
+					if filter and filter.direction then
+						return require("luasnip").jumpable(filter.direction)
+					end
+					return require("luasnip").in_snippet()
+				end,
+				jump = function(direction)
+					require("luasnip").jump(direction)
+				end,
+			},
+		},
+	},
 }
