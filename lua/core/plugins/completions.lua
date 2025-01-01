@@ -25,13 +25,7 @@ return {
 				["<C-l>"] = { "snippet_forward", "fallback" },
 			},
 			completion = {
-				list = {
-					selection = "auto_insert",
-				},
 				menu = {
-					auto_show = function(ctx)
-						return ctx.mode ~= "cmdline"
-					end,
 					draw = {
 						columns = { { "kind_icon", "label", gap = 1 }, { "label_description", "kind", gap = 1 } },
 					},
@@ -40,7 +34,6 @@ return {
 			sources = {
 				default = { "lsp", "path", "buffer", "luasnip" },
 			},
-			signature = { enabled = true },
 			snippets = {
 				expand = function(snippet)
 					require("luasnip").lsp_expand(snippet)

@@ -4,15 +4,30 @@ local M = {
 	},
 	cmake = {},
 	gopls = {},
-	html = {},
-	htmx = {},
+	html = {
+		filetypes = { "html", "templ" },
+		capabilities = {
+			textDocument = {
+				completion = {
+					completionItem = {
+						snippetSupport = true,
+					},
+				},
+			},
+		},
+	},
+	htmx = {
+		filetypes = { "html", "templ" },
+	},
 	lua_ls = {},
 	ols = {},
 	pyright = {},
 	rust_analyzer = {},
 	ts_ls = {},
 	tailwindcss = {},
-	templ = {},
+	templ = {
+		filetypes = { "templ" },
+	},
 	zls = {},
 }
 

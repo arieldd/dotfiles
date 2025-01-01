@@ -20,17 +20,7 @@ return {
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend(
-				"force",
-				capabilities,
-				-- require("cmp_nvim_lsp").default_capabilities(), {
-				-- offsetEncoding = { "utf-16" },
-				-- general = {
-				-- 	positionsEncodings = { "utf-16" },
-				-- },
-				-- }
-				require("blink.cmp").get_lsp_capabilities()
-			)
+			capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
 
 			require("mason-lspconfig").setup({
 				handlers = {
