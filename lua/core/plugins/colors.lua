@@ -6,6 +6,7 @@ return {
 		config = function()
 			require("catppuccin").setup({
 				integrations = {
+					blink_cmp = true,
 					harpoon = true,
 					mason = true,
 					noice = true,
@@ -17,7 +18,7 @@ return {
 					}
 				end,
 			})
-			vim.cmd.colorscheme("catppuccin-mocha")
+			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{
