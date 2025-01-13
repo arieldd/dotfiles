@@ -20,6 +20,8 @@ return {
 			ensure_installed = {
 				"delve",
 				"codelldb",
+                "java_debug_adapter",
+                "kotlin_debug_adapter",
 			},
 		})
 
