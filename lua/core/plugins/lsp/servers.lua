@@ -19,8 +19,8 @@ local M = {
 	htmx = {
 		filetypes = { "html", "templ" },
 	},
+	kotlin_language_server = {},
 	lua_ls = {},
-	ols = {},
 	pyright = {},
 	rust_analyzer = {},
 	ts_ls = {},
