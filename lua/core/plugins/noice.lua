@@ -3,7 +3,6 @@ return {
 	event = "VeryLazy",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
 	},
 	enabled = true,
 	config = function()
@@ -13,7 +12,6 @@ return {
 				override = {
 					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 					["vim.lsp.util.stylize_markdown"] = true,
-					["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
 				},
 			},
 			presets = {
@@ -21,12 +19,6 @@ return {
 				long_message_to_split = true,
 				lsp_doc_border = true,
 			},
-		})
-
-		require("notify").setup({
-			render = "wrapped-compact",
-			stages = "static",
-			timeout = 3000,
 		})
 
 		vim.keymap.set({ "n", "i", "s" }, "<c-f>", function()

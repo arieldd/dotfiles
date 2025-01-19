@@ -55,7 +55,6 @@ return {
 
 			pcall(telescope.load_extension("fzf"))
 			pcall(telescope.load_extension("ui-select"))
-			pcall(telescope.load_extension("notify"))
 			pcall(telescope.load_extension("noice"))
 			pcall(telescope.load_extension("live_grep_args"))
 
