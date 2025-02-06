@@ -12,11 +12,6 @@ return {
 					noice = true,
 					notify = true,
 				},
-				custom_highlights = function(colors)
-					return {
-						TelescopePromptBorder = { fg = colors.peach },
-					}
-				end,
 			})
 			vim.cmd.colorscheme("catppuccin")
 		end,
