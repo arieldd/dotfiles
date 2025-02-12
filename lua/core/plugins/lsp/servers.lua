@@ -4,6 +4,7 @@ local M = {
 	},
 	cmake = {},
 	gopls = {},
+	jdtls = {},
 	html = {
 		filetypes = { "html", "templ" },
 		capabilities = {
