@@ -66,6 +66,13 @@ return {
 			desc = "Buffers",
 		},
 		{
+			"<leader>.",
+			function()
+				Snacks.picker.recent()
+			end,
+			desc = "Recent Files",
+		},
+		{
 			"<leader>/",
 			function()
 				Snacks.picker.grep()
@@ -118,9 +125,9 @@ return {
 		{
 			"<leader>sr",
 			function()
-				Snacks.picker.recent()
+				Snacks.picker.resume()
 			end,
-			desc = "Recent",
+			desc = "Resume search",
 		},
 		-- git
 		{
@@ -328,13 +335,6 @@ return {
 				Snacks.picker.qflist()
 			end,
 			desc = "Quickfix List",
-		},
-		{
-			"<leader>sR",
-			function()
-				Snacks.picker.resume()
-			end,
-			desc = "Resume",
 		},
 		{
 			"<leader>su",

@@ -11,6 +11,7 @@ return {
 					mason = true,
 					noice = true,
 					notify = true,
+					snacks = true,
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
