@@ -352,21 +352,21 @@ return {
 		},
 		-- LSP
 		{
-			"gd",
+			"<leader>gd",
 			function()
 				Snacks.picker.lsp_definitions()
 			end,
 			desc = "Goto Definition",
 		},
 		{
-			"gD",
+			"<leader>gD",
 			function()
 				Snacks.picker.lsp_declarations()
 			end,
 			desc = "Goto Declaration",
 		},
 		{
-			"gr",
+			"<leader>gr",
 			function()
 				Snacks.picker.lsp_references()
 			end,
@@ -374,14 +374,14 @@ return {
 			desc = "References",
 		},
 		{
-			"gI",
+			"<leader>gI",
 			function()
 				Snacks.picker.lsp_implementations()
 			end,
 			desc = "Goto Implementation",
 		},
 		{
-			"gy",
+			"<leader>gy",
 			function()
 				Snacks.picker.lsp_type_definitions()
 			end,
