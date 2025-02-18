@@ -5,6 +5,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 			vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 		end
 
+		map("gd", vim.lsp.buf.definitions, "[G]oto [D]efinition")
+		map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+		map("gI", vim.lsp.buf.implementation, "[G]oto [I]mplementation")
+
 		local client = vim.lsp.get_client_by_id(event.data.client_id)
 		if client then
 			if client.server_capabilities.documentHighlightProvider then
