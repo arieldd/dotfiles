@@ -14,6 +14,13 @@ return {
 					["vim.lsp.util.stylize_markdown"] = true,
 				},
 			},
+			markdown = {
+				hover = {
+					["|(%S-)|"] = vim.cmd.help, -- vim help links
+					["%[.-%]%(file://([^%)]+)%)"] = vim.cmd.split, -- markdown links to local files
+					-- ["%[.-%]%((%S-)%)"] = require("noice.util").open, -- markdown links
+				},
+			},
 			presets = {
 				bottom_search = true,
 				long_message_to_split = true,
