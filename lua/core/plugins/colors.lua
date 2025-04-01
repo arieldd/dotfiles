@@ -2,20 +2,20 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				integrations = {
-					blink_cmp = true,
-					harpoon = true,
-					mason = true,
-					noice = true,
-					notify = true,
-					snacks = true,
-				},
-			})
-			vim.cmd.colorscheme("catppuccin")
-		end,
+		-- priority = 1000,
+		-- config = function()
+		-- 	require("catppuccin").setup({
+		-- 		integrations = {
+		-- 			blink_cmp = true,
+		-- 			harpoon = true,
+		-- 			mason = true,
+		-- 			noice = true,
+		-- 			notify = true,
+		-- 			snacks = true,
+		-- 		},
+		-- 	})
+		-- 	vim.cmd.colorscheme("catppuccin")
+		-- end,
 	},
 	{
 		"sainnhe/gruvbox-material",
@@ -44,5 +44,12 @@ return {
 		-- config = function()
 		-- 	vim.cmd.colorscheme("tokyonight-storm")
 		-- end,
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		config = function()
+			vim.cmd("colorscheme rose-pine")
+		end,
 	},
 }
