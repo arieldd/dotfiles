@@ -14,6 +14,7 @@ return {
 					css = { "prettierd", "prettier" },
 					go = { "goimports", "gofmt" },
 					html = { "prettierd", "prettier" },
+					java = { "clang-format" },
 					javascript = { "prettierd", "prettier" },
 					json = { "prettierd", "prettier" },
 					lua = { "stylua" },
