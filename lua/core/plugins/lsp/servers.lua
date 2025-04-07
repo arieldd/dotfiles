@@ -4,7 +4,6 @@ local M = {
 	},
 	cmake = {},
 	gopls = {},
-	jdtls = {},
 	html = {
 		filetypes = { "html", "templ" },
 		capabilities = {
@@ -20,7 +19,6 @@ local M = {
 	htmx = {
 		filetypes = { "html", "templ" },
 	},
-	kotlin_language_server = {},
 	lua_ls = {},
 	pyright = {},
 	rust_analyzer = {},
