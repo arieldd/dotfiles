@@ -32,3 +32,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 
 vim.keymap.set("n", "Q", "@qj", { desc = "Play macro recorded at [Q] register" })
 vim.keymap.set("x", "Q", ":norm @q<CR>", { desc = "Play macro recorded at [Q] register on selection" })
+
+-- increment / decrement without conflicting with Tmux
+vim.keymap.set("n", "<leader>1", "<C-a>", { desc = "Increment number" })
+vim.keymap.set("n", "<leader>2", "<C-x>", { desc = "Decrement number" })
