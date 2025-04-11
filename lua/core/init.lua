@@ -6,7 +6,6 @@ require("lazy").setup({
 	spec = {
 		{ import = "core.plugins" },
 	},
-	install = { colorscheme = { "evergreen" } },
 	checker = { enabled = true },
 })
 
