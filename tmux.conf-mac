@@ -1,0 +1,52 @@
+unbind r
+bind r source-file ~/.config/tmux/tmux.conf
+
+bind & kill-window
+bind x kill-pane
+
+# remap splits for sanity
+bind - split-window -c "#{pane_current_path}"
+bind _ split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+unbind '"'
+unbind %
+
+set -g prefix C-a
+set -g mouse on
+set -s escape-time 0
+
+# act like vim
+setw -g mode-keys vi
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+set-option -g focus-events on
+set-option -sa terminal-features 'xterm-256color:RGB'
+
+set -g status-position top
+
+# Tmux navigator work around
+not_tmux='#{m/r:^(n?vim|fzf)$,#{pane_current_command}}'
+bind-key -n 'C-h' if-shell -F "$not_tmux" 'send-keys' 'select-pane -L'
+bind-key -n 'C-j' if-shell -F "$not_tmux" 'send-keys' 'select-pane -D'
+bind-key -n 'C-k' if-shell -F "$not_tmux" 'send-keys' 'select-pane -U'
+bind-key -n 'C-l' if-shell -F "$not_tmux" 'send-keys' 'select-pane -R'
+
+# List of plugins
+set -g @plugin 'tmux-resurrect'
+set -g @plugin 'tmux-continuum'
+
+set -g @plugin 'rose-pine/tmux'
+set -g @rose_pine_variant 'main'
+set -g @rose_pine_directory 'on'
+set -g @rose_pine_date_time '%c'
+
+# These are not padded
+set -g @rose_pine_date_time_icon '󰃰' # Changes the default icon to the right of the date module
+set -g @rose_pine_window_status_separator "  " # Changes the default icon that appears between window names
+
+set -g @plugin 'tmux-plugins/tpm'
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.config/tmux/plugins/tpm/tpm'
