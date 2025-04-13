@@ -12,6 +12,6 @@ The things you need before installing the software.
 ### Installation
 
 ```
-$ cp .tmux.conf $HOME\ & tmux source ~\.tmux.conf
-$ cp starship.toml ~\.config
+$ cp tmux.conf-rose-pine $HOME/.config/tmux/tmux.conf & tmux source $HOME/.config/tmux/tmux.conf
+$ cp starship.toml $HOME/.config
 $ Profit

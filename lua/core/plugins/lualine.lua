@@ -4,6 +4,7 @@ return { -- Status line below
 	config = function()
 		local noice = require("noice")
 		local lualine = require("lualine")
+		local lazy_status = require("lazy.status")
 		lualine.setup({
 			options = {
 				theme = "auto",
@@ -17,6 +18,10 @@ return { -- Status line below
 					},
 				},
 				lualine_x = {
+					{
+						lazy_status.updates,
+						cond = lazy_status.has_updates,
+					},
 					{
 						noice.api.status.command.get,
 						cond = noice.api.status.command.has,
