@@ -14,13 +14,14 @@ return { -- Status line below
 					{
 						"filename",
 						file_status = true,
-						path = 1,
+						path = 3,
 					},
 				},
 				lualine_x = {
 					{
 						lazy_status.updates,
 						cond = lazy_status.has_updates,
+						color = "@comment.todo",
 					},
 					{
 						noice.api.status.command.get,
