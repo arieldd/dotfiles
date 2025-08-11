@@ -24,7 +24,6 @@ return {
 			require("mini.move").setup()
 		end,
 	},
-	{ "christoomey/vim-tmux-navigator" },
 	{ -- Undo tree for undo visualisation
 		"mbbill/undotree",
 		config = function()

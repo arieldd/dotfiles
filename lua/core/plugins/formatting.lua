@@ -11,26 +11,27 @@ return {
 					c = { "clang-format" },
 					cmake = { "cmake_format" },
 					cpp = { "clang-format" },
-					css = { "prettierd", "prettier" },
+					css = { "prettier", "prettierd" },
 					go = { "goimports", "gofmt" },
-					html = { "prettierd", "prettier" },
+					html = { "prettier", "prettierd" },
 					java = { "clang-format" },
-					javascript = { "prettierd", "prettier" },
-					json = { "prettierd", "prettier" },
+					javascript = { "prettier", "prettierd" },
+					json = { "prettier", "prettierd" },
 					lua = { "stylua" },
 					python = { "black", "isort" },
 					rust = { "rustfmt" },
-					typescript = { "prettierd", "prettier" },
+					typescript = { "prettier", "prettierd" },
 					zig = { "zigfmt" },
 					["_"] = { "trim_whitespace" },
 				},
-				format_on_save = function(bufnr)
-					-- Disable with a global or buffer-local variable
-					if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-						return
-					end
-					return { timeout_ms = 500, lsp_format = "fallback" }
-				end,
+				format_on_save = false,
+				--                 function(bufnr)
+				-- 	-- Disable with a global or buffer-local variable
+				-- 	if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+				-- 		return
+				-- 	end
+				-- 	return { timeout_ms = 500, lsp_format = "fallback" }
+				-- end,
 			})
 
 			vim.api.nvim_create_user_command("FormatDisable", function(args)
