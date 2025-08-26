@@ -20,7 +20,7 @@ return {
 					lua = { "stylua" },
 					python = { "black", "isort" },
 					rust = { "rustfmt" },
-					typescript = { "prettier", "prettierd" },
+					typescript = { "prettierd", "prettier" },
 					zig = { "zigfmt" },
 					["_"] = { "trim_whitespace" },
 				},
