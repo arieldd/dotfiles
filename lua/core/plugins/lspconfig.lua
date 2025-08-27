@@ -3,33 +3,44 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
-			{ "folke/lazydev.nvim", ft = "lua" },
-			"saghen/blink.cmp",
 		},
 		config = function()
-			require("core.plugins.lsp.setup")
+			require("mason").setup()
+
 			local servers = require("core.plugins.lsp.servers")
 			local linters = require("core.plugins.lsp.linters")
 
-			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, linters)
+			for server, config in pairs(servers) do
+				vim.lsp.config(server, config)
+				vim.lsp.enable(server)
+			end
 
-			require("mason").setup()
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			for _, linter in ipairs(linters) do
+				vim.lsp.config(linter, {})
+				vim.lsp.enable(linter)
+			end
 
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities, require("blink.cmp").get_lsp_capabilities())
+			-- Inlay hints --
+			vim.api.nvim_create_autocmd("LspAttach", {
+				group = vim.api.nvim_create_augroup("CoreLspConfig", { clear = true }),
+				callback = function(event)
+					local map = function(keys, func, desc)
+						vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
+					end
 
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
+					local client = vim.lsp.get_client_by_id(event.data.client_id)
+					if client then
+						print("attaching client " .. client["name"])
+						if client.server_capabilities.inlayHintProvider then
+							map("<leader>hh", function()
+								vim.lsp.inlay_hint.enable(
+									not vim.lsp.inlay_hint.is_enabled({ event.buf }),
+									{ event.buf }
+								)
+							end, "Toggle inlay [h]ints")
+						end
+					end
+				end,
 			})
 		end,
 	},
