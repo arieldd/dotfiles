@@ -1,4 +1,5 @@
 local linters = {
+	"stylua",
 	"clang-format",
 	"cmakelang",
 	"prettierd",

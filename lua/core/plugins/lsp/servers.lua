@@ -16,14 +16,12 @@ local M = {
 			},
 		},
 	},
-	htmx = {
-		filetypes = { "html", "templ" },
-	},
 	lua_ls = {},
 	pyright = {},
 	rust_analyzer = {},
-	ts_ls = {},
-	tailwindcss = {},
+	ts_ls = {
+		workspace_required = true,
+	},
 	templ = {
 		filetypes = { "templ" },
 	},
